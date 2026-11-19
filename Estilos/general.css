@@ -401,13 +401,16 @@ h3 { font-size: clamp(1.05rem, 3.5vw, 1.25rem); }
 .franja-promo a { color: var(--ciruela); font-weight: 800; text-decoration: underline; white-space: nowrap; }
 .franja-promo a:hover { text-decoration: none; }
 
-@media (min-width: 700px) {
-  .franja-promo { font-size: 1rem; }
-}
+body:has(dialog[open]) { overflow: hidden; } 
+
 
 /* =========================================================
    RESPONSIVE (siempre al final)
    ========================================================= */
+@media (min-width: 700px) {
+  .franja-promo { font-size: 1rem; }
+}
+
 @media (min-width: 600px) {
   .banda { padding: 3.5rem 0; }
   .pie-superior { grid-template-columns: 1.8fr 1fr 1fr 1.3fr; }   /* 3 columnas iguales = simétrico */  .pie-marca { grid-column: auto; }

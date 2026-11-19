@@ -10,7 +10,6 @@
 .formulario h2 { margin-bottom: 1rem; }
 .campo { margin-bottom: 1rem; }
 .campo > label,
-.campo > .etiqueta { display: block; margin-bottom: 0.3rem; font-weight: 700; font-size: 0.95rem; }
 .campo .opcional { font-weight: 400; color: var(--texto-suave); font-size: 0.85rem; }
 .campo .ayuda { margin-top: 0.3rem; font-size: 0.85rem; color: var(--texto-suave); }
 

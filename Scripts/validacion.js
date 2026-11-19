@@ -104,7 +104,7 @@
       if (errores.length) {
         mostrarResumen(errores);
         if (resumen) resumen.focus();
-        campos(errores[0].nombre)[0].focus();
+        else campos(errores[0].nombre)[0].focus();
         return;
       }
       limpiarResumen();

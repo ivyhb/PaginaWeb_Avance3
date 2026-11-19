@@ -86,8 +86,6 @@
 .popup-fecha { margin-bottom: 0.6rem; font-size: 0.95rem; font-weight: 700; }
 .popup-condiciones { margin-top: 0.5rem; font-size: 0.8rem; font-weight: 700; }
 
-body:has(dialog[open]) { overflow: hidden; }   /* la página de atrás no se desplaza */
-
 @media (prefers-reduced-motion: reduce) {
   .popup[open] { animation: none; }
 }

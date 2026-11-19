@@ -73,11 +73,12 @@ fieldset.bloque-form { border: 0; padding: 0; margin: 0 0 1.75rem; min-width: 0;
 @media (min-width: 640px) {
   .fila-doble { grid-template-columns: 1fr 1fr; }
 }
+.proveedor-col { display: grid; gap: 1rem; }
+
 @media (min-width: 900px) {
   .reclamo-grid { grid-template-columns: 1fr 2.2fr; gap: 2rem; }
-  .proveedor-col { position: sticky; top: calc(var(--alto-cabecera) + 16px); display: grid; gap: 1rem; }
+  .proveedor-col { position: sticky; top: calc(var(--alto-cabecera) + 16px); }
 }
-
 /* ---------- IMPRESIÓN / GUARDAR COMO PDF ---------- */
 @media print {
   .cabecera, .pie, .whatsapp-flotante, .banner-pagina, .franja-promo,
