@@ -1,0 +1,96 @@
+/* formularios.css — estilos compartidos por contacto.html y reclamaciones.html
+   (campos, validación, mensajes de error y confirmación) */
+
+.formulario {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+.formulario h2 { margin-bottom: 1rem; }
+.campo { margin-bottom: 1rem; }
+.campo > label,
+.campo > .etiqueta { display: block; margin-bottom: 0.3rem; font-weight: 700; font-size: 0.95rem; }
+.campo .opcional { font-weight: 400; color: var(--texto-suave); font-size: 0.85rem; }
+.campo .ayuda { margin-top: 0.3rem; font-size: 0.85rem; color: var(--texto-suave); }
+
+.campo input:not([type="checkbox"]):not([type="radio"]),
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid var(--borde);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;           /* 16px evita el zoom automático en iPhone */
+  color: var(--texto);
+  background: #fff;
+}
+.campo textarea { resize: vertical; min-height: 130px; }
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus { outline: none; border-color: var(--rosa); box-shadow: 0 0 0 3px var(--rosa-claro); }
+.formulario .btn { width: 100%; }
+
+/* ---------- VALIDACIÓN ---------- */
+.campo--error input:not([type="checkbox"]):not([type="radio"]),
+.campo--error select,
+.campo--error textarea { border-color: #B3261E; background: #FFF6F5; }
+.campo--ok input:not([type="checkbox"]):not([type="radio"]),
+.campo--ok select,
+.campo--ok textarea { border-color: var(--whatsapp); }
+
+.error-msg {
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #B3261E;
+}
+.error-msg:empty { display: none; }
+.error-msg::before { content: "⚠ "; }
+
+.contador { display: block; margin-top: 0.25rem; font-size: 0.8rem; color: var(--texto-suave); text-align: right; }
+.contador.excedido { color: #B3261E; font-weight: 700; }
+
+.resumen-errores {
+  margin-bottom: 1.25rem;
+  padding: 0.9rem 1rem;
+  border: 2px solid #B3261E;
+  border-radius: 12px;
+  background: #FFF6F5;
+  color: #7A1913;
+  font-size: 0.95rem;
+}
+.resumen-errores[hidden] { display: none; }
+.resumen-errores strong { display: block; margin-bottom: 0.35rem; }
+.resumen-errores ul { padding-left: 1.2rem; }
+.resumen-errores a { color: #7A1913; font-weight: 700; }
+
+/* ---------- CASILLAS Y OPCIONES ---------- */
+.check,
+.opcion { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; cursor: pointer; }
+.check input,
+.opcion input { flex-shrink: 0; width: 1.25rem; height: 1.25rem; margin-top: 0.2rem; accent-color: var(--rosa); }
+.opciones { display: grid; gap: 0.6rem; }
+
+fieldset.campo-grupo { border: 0; padding: 0; margin: 0 0 1rem; min-width: 0; }
+fieldset.campo-grupo > legend { padding: 0; margin-bottom: 0.4rem; font-weight: 700; font-size: 0.95rem; }
+
+/* ---------- CONFIRMACIÓN ---------- */
+.exito {
+  padding: 1.25rem;
+  border: 2px solid var(--whatsapp);
+  border-radius: var(--radio);
+  background: #F1FBF5;
+}
+.exito[hidden] { display: none; }
+.exito h2 { margin-bottom: 0.5rem; }
+.exito p { color: var(--texto); margin-bottom: 1rem; }
+.exito .grupo-botones .btn { width: auto; flex: 1 1 200px; }
+
+/* Campo trampa anti-spam: invisible para personas */
+.trampa { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+@media (min-width: 900px) {
+  .formulario { padding: 2rem; }
+}

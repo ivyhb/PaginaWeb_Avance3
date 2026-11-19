@@ -1,0 +1,93 @@
+/* popup.css — pop-up de Navidad (solo index.html) */
+
+.popup {
+  position: relative;
+  margin: auto;                         /* general.css pone margin:0 a todo y el pop-up se desalinearía */
+  width: min(92vw, 420px);
+  aspect-ratio: 4 / 5;
+  max-height: 94dvh;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  overflow: auto;                       /* solo se usa en pantallas muy bajas; la barra se oculta */
+  scrollbar-width: none;
+  background: var(--rosa-claro);
+  box-shadow: 0 20px 50px rgba(28, 13, 21, 0.45);
+}
+.popup::-webkit-scrollbar { display: none; }
+.popup::backdrop { background: rgba(28, 13, 21, 0.6); }
+.popup[open] { animation: popup-entra 0.35s ease-out; }
+@keyframes popup-entra {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
+.popup-fondo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.popup-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ciruela);
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.popup-cerrar:hover { background: var(--dorado); }
+
+.popup-contenido {
+  position: relative;                   /* queda sobre la imagen */
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 100%;
+  padding: 10% 12% 20%;                 /* deja libre el oso de abajo a la derecha */
+  text-align: center;
+  color: var(--ciruela);
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.9);   /* halo claro: separa las letras del fondo */
+}
+/* Velo claro detrás del texto: mejora el contraste sin tapar los adornos de los bordes */
+.popup-contenido::before {
+  content: "";
+  position: absolute;
+  inset: 6% 5% 12%;
+  z-index: -1;
+  background: radial-gradient(ellipse at center, rgba(255, 249, 251, 0.88) 0%, rgba(255, 249, 251, 0.65) 55%, rgba(255, 249, 251, 0) 100%);
+}
+.popup-contenido .btn { text-shadow: none; }
+
+.popup-etiqueta { font-size: 0.95rem; font-weight: 800; }
+.popup-contenido h2 { font-size: clamp(1.5rem, 7vw, 2rem); }
+.popup-descuento { font-weight: 800; line-height: 1.3; }
+.popup-descuento strong {
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: clamp(3rem, 14vw, 4.2rem);
+  line-height: 1;
+  color: var(--rosa-oscuro);
+}
+.popup-fecha { margin-bottom: 0.6rem; font-size: 0.95rem; font-weight: 700; }
+.popup-condiciones { margin-top: 0.5rem; font-size: 0.8rem; font-weight: 700; }
+
+body:has(dialog[open]) { overflow: hidden; }   /* la página de atrás no se desplaza */
+
+@media (prefers-reduced-motion: reduce) {
+  .popup[open] { animation: none; }
+}

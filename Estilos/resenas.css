@@ -1,0 +1,36 @@
+/* resenas.css — SOLO lo propio de resenas.html */
+
+.reviews { display: grid; gap: 1rem; }
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.5rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+.review-card header { display: flex; align-items: center; gap: 0.75rem; }
+.review-card .inicial {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rosa);
+  color: #fff;
+  font-family: var(--fuente-titulos);
+  font-size: 1.2rem;
+}
+.review-card h3 { font-size: 1.1rem; }
+.review-card p { color: var(--texto); }
+.review-card .compra { margin-top: auto; font-size: 0.85rem; color: var(--texto-suave); }
+
+.invitacion { text-align: center; }
+.invitacion h2::after { margin-left: auto; margin-right: auto; }
+.invitacion p { color: #EADDE3; margin: 0.5rem auto 1.5rem; max-width: 50ch; }
+
+@media (min-width: 640px) { .reviews { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 960px) { .reviews { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; } }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Vanidades Store</title>
+    <meta name="description" content="Escríbenos por WhatsApp o formulario. Visítanos en el Mercado Corporación, San Juan de Lurigancho. Lunes a sábado de 12:00 a 6:00 pm.">
+
+    <!-- Vista previa al compartir el link por WhatsApp / redes.
+         Nota: og:image debe ser una URL completa (https://tudominio.com/...) cuando publiquen la web -->
+    <meta property="og:title" content="Vanidades Store - Juguetes, ropa, regalos y catálogos">
+    <meta property="og:description" content="Encuentra juguetes, regalos, ropa y catálogos de Natura, Avon, Esika, Seytu y Yanbal. Compra segura por Yape, Plin o efectivo.">
+    <meta property="og:image" content="Imagenes/logo_cr_vanidades.png">
+    <meta property="og:type" content="website">
+
+    <!-- Tipografías (si no cargan, el navegador usa las de respaldo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Estilos/general.css">
+    <link rel="stylesheet" href="Estilos/formularios.css">
+    <link rel="stylesheet" href="Estilos/contacto.css">
+</head>
+<body id="top">
+
+<!-- ENCABEZADO -->
+<header class="cabecera">
+    <div class="cabecera-interior">
+        <a class="marca" href="index.html" aria-label="Vanidades Store - Ir al inicio">
+            <img src="Imagenes/logo_cr_horizontal.png" alt="C&amp;R Vanidades Store" width="213" height="52">
+        </a>
+
+        <!-- Menú hamburguesa en celular (solo CSS, sin JavaScript) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar el menú">
+        <label for="menu-toggle" class="menu-boton" aria-hidden="true"><span></span></label>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu" aria-label="Menú principal">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="contacto.html" aria-current="page">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <section class="banner-pagina">
+        <div class="contenedor">
+            <h1>Contáctanos</h1>
+            <p>Escríbenos o visítanos, con gusto te ayudamos.</p>
+        </div>
+    </section>
+
+    <section class="banda" aria-label="Formulario y datos de atención">
+        <div class="contenedor contacto-grid">
+
+            <!-- Formulario (se valida con Scripts/validacion.js + Scripts/contacto.js) -->
+            <form class="formulario" id="form-contacto" action="#" method="post" novalidate>
+                <h2>Envíanos un mensaje</h2>
+
+                <!-- Confirmación (aparece al enviar correctamente) -->
+                <div class="exito" id="exito-contacto" role="status" tabindex="-1" hidden>
+                    <h2>¡Gracias, <span id="exito-nombre"></span>!</h2>
+                    <p>Tu mensaje está listo. Para que nos llegue de inmediato, envíalo por WhatsApp con el texto ya escrito.</p>
+                    <div class="grupo-botones">
+                        <a id="exito-wa" href="#" target="_blank" rel="noopener" class="btn btn-wa"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Enviar por WhatsApp</a>
+                        <button type="button" id="nuevo-mensaje" class="btn btn-borde">Escribir otro mensaje</button>
+                    </div>
+                </div>
+
+                <div id="campos-contacto">
+                    <div class="resumen-errores" role="alert" tabindex="-1" hidden></div>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="80" autocomplete="name" placeholder="Ej. Juan Pérez" aria-describedby="error-nombre">
+                        <p class="error-msg" id="error-nombre"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required maxlength="100" autocomplete="email" placeholder="tu@correo.com" aria-describedby="error-correo">
+                        <p class="error-msg" id="error-correo"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="asunto">Asunto <span class="opcional">(opcional)</span></label>
+                        <input type="text" id="asunto" name="asunto" maxlength="80" placeholder="¿Sobre qué deseas consultarnos?" aria-describedby="error-asunto">
+                        <p class="error-msg" id="error-asunto"></p>
+                    </div>
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..." aria-describedby="error-mensaje contador-mensaje"></textarea>
+                        <span class="contador" id="contador-mensaje">0 / 500</span>
+                        <p class="error-msg" id="error-mensaje"></p>
+                    </div>
+
+                    <!-- Campo trampa anti-spam (las personas no lo ven) -->
+                    <div class="trampa" aria-hidden="true">
+                        <label>No llenar este campo <input type="text" name="web" tabindex="-1" autocomplete="off"></label>
+                    </div>
+
+                    <div class="campo">
+                        <label class="check" for="acepto">
+                            <input type="checkbox" id="acepto" name="acepto" aria-describedby="error-acepto">
+                            <span>Acepto que Vanidades Store use mis datos solo para responder esta consulta.</span>
+                        </label>
+                        <p class="error-msg" id="error-acepto"></p>
+                    </div>
+
+                    <button type="submit" class="btn btn-rosa">Enviar mensaje</button>
+                </div>
+            </form>
+
+            <!-- Información de atención (aside) -->
+            <aside class="datos" aria-label="Información de atención">
+                <div class="dato">
+                    <h3>📍 Ubicación</h3>
+                    <address><p>Av. Mercado Corporación, San Juan de Lurigancho, Lima</p></address>
+                </div>
+                <div class="dato">
+                    <h3>🕛 Horario de atención</h3>
+                    <p>Lunes a sábado de 12:00 pm a 6:00 pm</p>
+                </div>
+                <div class="dato">
+                    <h3>💬 Atención directa</h3>
+                    <p>¿Tienes dudas rápidas? Escríbenos directamente.</p>
+                    <a href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-wa"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Chatear por WhatsApp</a>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="banda banda-blanca" aria-labelledby="titulo-mapa">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-mapa">Cómo llegar</h2></div>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps?q=Mercado%20Corporaci%C3%B3n%2C%20San%20Juan%20de%20Lurigancho&amp;output=embed"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mapa con la ubicación de Vanidades Store"></iframe>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- WhatsApp flotante (visible en las 5 páginas) -->
+<a href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20informaci%C3%B3n" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <img src="Imagenes/icons8-whatsapp-48.png" alt="" width="30" height="30">
+</a>
+
+<!-- PIE DE PÁGINA -->
+<footer class="pie">
+    <div class="pie-superior">
+        <div class="pie-marca">
+            <img src="Imagenes/logo_cr_vanidades.png" alt="Logo Vanidades Store" width="96" height="96" loading="lazy">
+            <div>
+                <h4>Vanidades Store</h4>
+                <p>Tu bazar de confianza en el mercado, hace más de 10 años.</p>
+            </div>
+        </div>
+
+        <nav aria-label="Enlaces del pie de página">
+            <h4>Enlaces</h4>
+            <div class="pie-enlaces">
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+
+        <div>
+            <h4>Síguenos</h4>
+            <div class="redes">
+                <!-- Reemplazar "#" por el link real de cada red social -->
+                <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><img src="Imagenes/icons8-instagram-48.png" alt="" width="24" height="24"></a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><img src="Imagenes/facebook.png" alt="" width="24" height="24"></a>
+            </div>
+             <a class="libro-reclamaciones" href="reclamaciones.html"><span aria-hidden="true">📖</span> Libro de Reclamaciones</a>
+        </div>
+    </div>
+
+<div class="pie-inferior">
+    <p>© 2026 Vanidades Store · Horario: Lun-Sáb 12:00 - 6:00 pm</p>
+    <a href="#top">Volver arriba ↑</a>
+</div>
+</footer>
+
+<script src="Scripts/validacion.js" defer></script>
+<script src="Scripts/contacto.js" defer></script>
+
+</body>
+</html>

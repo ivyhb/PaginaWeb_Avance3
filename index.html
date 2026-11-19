@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanidades Store - Inicio</title>
+    <meta name="description" content="Juguetes, regalos, ropa y catálogos de tus marcas favoritas en el Mercado Corporación, San Juan de Lurigancho.">
+
+    <!-- Vista previa al compartir el link por WhatsApp / redes.
+         Nota: og:image debe ser una URL completa (https://tudominio.com/...) cuando publiquen la web -->
+    <meta property="og:title" content="Vanidades Store - Juguetes, ropa, regalos y catálogos">
+    <meta property="og:description" content="Encuentra juguetes, regalos, ropa y catálogos de Natura, Avon, Esika, Seytu y Yanbal. Compra segura por Yape, Plin o efectivo.">
+    <meta property="og:image" content="Imagenes/logo_cr_vanidades.png">
+    <meta property="og:type" content="website">
+
+    <!-- Tipografías (si no cargan, el navegador usa las de respaldo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilos/general.css">
+    <link rel="stylesheet" href="Estilos/index.css">
+    <link rel="stylesheet" href="Estilos/popup.css">
+</head>
+
+<body id="top">
+
+<!-- ENCABEZADO -->
+<header class="cabecera">
+    <div class="cabecera-interior">
+        <a class="marca" href="index.html" aria-label="Vanidades Store - Ir al inicio">
+            <img src="Imagenes/logo_cr_horizontal.png" alt="C&R Vanidades Store" width="213" height="52">
+        </a>
+
+        <!-- Menú hamburguesa en celular (solo CSS, sin JavaScript) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar el menú">
+        <label for="menu-toggle" class="menu-boton" aria-hidden="true"><span></span></label>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu" aria-label="Menú principal">
+                <a href="index.html" aria-current="page">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO: lo primero que ve el usuario (ahora la imagen ocupa todo el banner) -->
+    <section class="hero" aria-labelledby="titulo-hero">
+    <picture>
+     <source media="(max-width: 699px)" srcset="Imagenes/bannerCelular.png">
+        <img class="hero-fondo" src="Imagenes/bannerHerofinal.png" alt="Juguetes, regalos, 
+    artículos para festividades y ropa de moda" width="2688" height="1152" fetchpriority="high">
+    </picture>
+        <div class="contenedor">
+            <div class="hero-texto">
+                <h1 id="titulo-hero">Bienvenidos a Vanidades Store</h1>
+                <p>Juguetes, regalos, ropa y catálogos de tus marcas favoritas.</p>
+                <div class="grupo-botones centrado">
+                    <a href="productos.html" class="btn btn-rosa">Ver productos</a>
+                    <a href="contacto.html" class="btn btn-borde">Cómo llegar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONFIANZA -->
+    <section class="confianza" aria-label="Por qué comprar con nosotros">
+        <div class="contenedor confianza-grid">
+            <p><strong>Tu tienda de confianza:</strong> ofrecemos una amplia variedad de artículos para el hogar, accesorios, juguetes y regalos de excelente calidad.</p>
+            <ul>
+                <li>📍 Mercado Corporación, San Juan de Lurigancho</li>
+                <li>🕛 Lunes a sábado, 12:00 a 6:00 pm</li>
+                <li>💳 Pagos con Yape, Plin o efectivo</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ACCESOS A CATEGORÍAS -->
+    <section class="banda" aria-labelledby="titulo-categorias">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-categorias">¿Qué estás buscando?</h2></div>
+            <div class="categorias">
+                <a class="categoria" href="productos.html#juguetes"><img src="Imagenes/categoria-juguetes-hero-pastel-4-5.png" alt="" loading="lazy"><span>Juguetes</span></a>
+                <a class="categoria" href="productos.html#regalos"><img src="Imagenes/categoria-regalos-hero-pastel-4-5.png" alt="" loading="lazy"><span>Regalos</span></a>
+                <a class="categoria" href="productos.html#ropa"><img src="Imagenes/categoria-ropa-hero-pastel-4-5.png" alt="" loading="lazy"><span>Ropa</span></a>
+                <a class="categoria logos" href="productos.html#catalogos"><img src="Imagenes/categoria-catalogos-hero-pastel-4-5.png" alt="" loading="lazy"><span>Catálogos</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="banda banda-blanca" id="destacados" aria-labelledby="titulo-destacados">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-destacados">Favoritos de nuestros clientes</h2></div>
+            <div class="rejilla-productos">
+               <article class="producto">
+                    <img src="Imagenes/juguete17.png" alt="Peluche de Spiderman" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Peluche de Spiderman</h3>
+                        <p>¡Ideal para regalar o completar tu colección!</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20Spiderman" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo1.png" alt="Caja de regalo con girasol y peluche de Snoopy" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Caja de regalo con Snoopy</h3>
+                        <p>Girasol, peluche y bebida en una caja decorativa.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Caja%20de%20regalo%20con%20Snoopy" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa5.png" alt="Polo de manga larga con estampado de leopardo" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo animal print</h3>
+                        <p>Polo de manga larga y cuello redondo con estampado de leopardo.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20animal%20print" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                    </div>
+                    <div class="grupo-botones centrado mt">
+                        <a href="productos.html" class="btn btn-rosa">Ver catálogo completo</a>
+                    </div>
+                </div>
+    </section>
+
+    <!-- OPINIONES (aside) -->
+    <aside class="banda banda-rosa" aria-labelledby="titulo-opiniones">
+        <div class="contenedor">
+            <div class="titulo-seccion titulo-centrado">
+                <h2 id="titulo-opiniones">Lo que dicen nuestros clientes</h2>
+                <p>Descubre las opiniones de quienes ya nos visitaron.</p>
+            </div>
+            <div class="mini-resenas">
+                <blockquote class="mini-review">
+                    <div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+                    <p>“Compré el box de Día de la Madre y quedó hermoso. La atención fue muy rápida.”</p>
+                    <footer>María G.</footer>
+                </blockquote>
+                <blockquote class="mini-review">
+                    <div class="estrellas" role="img" aria-label="5 de 5 estrellas">★★★★★</div>
+                    <p>“El peluche de Woody es el favorito de mi hija. ¡Muy recomendable!”</p>
+                    <footer>Ana L.</footer>
+                </blockquote>
+            </div>
+            <div class="grupo-botones centrado">
+                <a href="resenas.html" class="btn btn-rosa">Ver todas las reseñas</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="banda banda-blanca" aria-labelledby="titulo-nosotros">
+        <div class="contenedor nosotros-grid">
+            <img src="Imagenes/local.jpg" alt="Fachada de la tienda Vanidades Store en el mercado" width="1000" height="747" loading="lazy">
+            <div>
+                <div class="titulo-seccion"><h2 id="titulo-nosotros">Sobre nosotros</h2></div>
+                <p>Más de 10 años ofreciendo calidad, variedad y buena atención en el Mercado Corporación de San Juan de Lurigancho.</p>
+                <a href="nosotros.html" class="btn btn-borde">Conócenos más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO RÁPIDO (aside) -->
+    <aside class="banda banda-oscura contacto-mini" aria-labelledby="titulo-dudas">
+        <div class="contenedor">
+            <h2 id="titulo-dudas">¿Tienes dudas?</h2>
+            <p>Escríbenos, será un gusto ayudarte.</p>
+            <div class="grupo-botones centrado">
+                <a href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn btn-wa"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Chatear por WhatsApp</a>
+                <a href="contacto.html" class="btn btn-claro">Ir al formulario de contacto</a>
+            </div>
+        </div>
+    </aside>
+
+</main>
+
+<!-- WhatsApp flotante (visible en las 5 páginas) -->
+<a href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20informaci%C3%B3n" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <img src="Imagenes/icons8-whatsapp-48.png" alt="" width="30" height="30">
+</a>
+
+<!-- PIE DE PÁGINA -->
+<footer class="pie">
+    <div class="pie-superior">
+        <div class="pie-marca">
+            <img src="Imagenes/logo_cr_vanidades.png" alt="Logo Vanidades Store" width="96" height="96" loading="lazy">
+            <div>
+                <h4>Vanidades Store</h4>
+                <p>Tu bazar de confianza en el mercado, hace más de 10 años.</p>
+            </div>
+        </div>
+
+        <nav aria-label="Enlaces del pie de página">
+            <h4>Enlaces</h4>
+            <div class="pie-enlaces">
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+
+        <div>
+            <h4>Síguenos</h4>         
+            <div class="redes">
+                <!-- Reemplazar "#" por el link real de cada red social -->
+                <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><img src="Imagenes/icons8-instagram-48.png" alt="" width="24" height="24"></a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><img src="Imagenes/facebook.png" alt="" width="24" height="24"></a>
+            </div>
+             <a class="libro-reclamaciones" href="reclamaciones.html"><span aria-hidden="true">📖</span> Libro de Reclamaciones</a>
+        </div>
+    </div>
+
+<div class="pie-inferior">
+    <p>© 2026 Vanidades Store · Horario: Lun-Sáb 12:00 - 6:00 pm</p>
+    <a href="#top">Volver arriba ↑</a>
+</div>
+</footer>
+<!--POP UP DE PROMO NAVIDEÑA-->
+<dialog class="popup" id="popup-navidad"aria-labelledby="popup-titulo">
+    <button class="popup-cerrar" type="button"data-cerrar aria-label="Cerrar promoción">✕</button>
+    <img class="popup-fondo"src="Imagenes/banner-promo-navidad.png" alt=""width="896" height="1152">
+    <div class="popup-contenido">
+        <p class="popup-etiqueta">Navidad en Vanidades Store</p>
+        <h2 id="popup-titulo">¡Juguetes para regalar!</h2>
+        <p class="popup-descuento">Lleva 2 juguetes y el 2do tiene<strong><span data-promo="porcentaje">20</span> %</strong>de descuento</p>
+        <p class="popup-fecha">Válido hasta el <span data-promo="fechaTexto">24 de diciembre</span></p>
+        <a class="btn btn-rosa" href="productos.html#juguetes">Ver juguetes</a>
+        <p class="popup-condiciones" data-promo="condiciones">Descuento sobre el juguete de menor precio. Hasta agotar stock.</p>
+    </div>
+</dialog>
+<script src="Scripts/config.js" defer></script>
+<script src="Scripts/franja.js" defer></script>
+<script src="Scripts/popup.js" defer></script>
+</body>
+</html>

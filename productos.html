@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Vanidades Store</title>
+    <meta name="description" content="Catálogo de juguetes, regalos, ropa, festividades y catálogos de Natura, Avon, Esika, Seytu y Yanbal.">
+
+    <!-- Vista previa al compartir el link por WhatsApp / redes -->
+    <meta property="og:title" content="Vanidades Store - Juguetes, ropa, regalos y catálogos">
+    <meta property="og:description" content="Encuentra juguetes, regalos, ropa y catálogos de Natura, Avon, Esika, Seytu y Yanbal. Compra segura por Yape, Plin o efectivo.">
+    <meta property="og:image" content="Imagenes/logo_cr_vanidades.png">
+    <meta property="og:type" content="website">
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Estilos/general.css">
+    <link rel="stylesheet" href="Estilos/productos.css">
+    <link rel="stylesheet" href="Estilos/lista.css">
+</head>
+<body id="top">
+
+<!-- ENCABEZADO -->
+<header class="cabecera">
+    <div class="cabecera-interior">
+        <a class="marca" href="index.html" aria-label="Vanidades Store - Ir al inicio">
+            <img src="Imagenes/logo_cr_horizontal.png" alt="C&R Vanidades Store" width="213" height="52">
+        </a>
+
+        <!-- Menú hamburguesa en celular -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Abrir o cerrar el menú">
+        <label for="menu-toggle" class="menu-boton" aria-hidden="true"><span></span></label>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="menu" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="productos.html" aria-current="page">Productos</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="resenas.html">Reseñas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- Banner de la página -->
+    <section class="banner-pagina con-foto">
+        <div class="contenedor">
+            <h1>Nuestros productos</h1>
+            <p>Encuentra juguetes, regalos, ropa, artículos de temporada y catálogos para toda la familia.</p>
+        </div>
+    </section>
+
+    <!-- Submenú de categorías -->
+    <nav class="submenu" aria-label="Categorías de productos">
+    <div class="submenu-lista">
+            <a href="#favoritos">Favoritos</a>
+            <a href="#juguetes">Juguetes</a>
+            <a href="#regalos">Regalos</a>
+            <a href="#festividades">Festividades</a>
+            <a href="#ropa">Ropa</a>
+            <a href="#catalogos">Catálogos</a>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN FAVORITOS (6 productos sugeridos) -->
+    <section class="seccion-productos" id="favoritos" aria-labelledby="titulo-favoritos">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-favoritos">Favoritos de nuestros clientes</h2></div>
+            <div class="rejilla-productos">
+                <article class="producto">
+                    <img src="Imagenes/juguete17.png" alt="Peluche de Spiderman" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Peluche de Spiderman</h3>
+                        <p>¡Ideal para regalar o completar tu colección!</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20Spiderman" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo1.png" alt="Caja de regalo con girasol y peluche de Snoopy" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Caja de regalo con Snoopy</h3>
+                        <p>Girasol, peluche y bebida en una caja decorativa.</p>
+                        <p class="precio">S/ 45.00</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Caja%20de%20regalo%20con%20Snoopy" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa5.png" alt="Polo de manga larga con estampado de leopardo" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo animal print</h3>
+                        <p>Polo de manga larga y cuello redondo con estampado de leopardo.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20animal%20print" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa18.png" alt="Camisa moderna a rayas para mujer" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Camisa moderna a rayas</h3>
+                        <p>Azul rayado con botones. Estilo clásico para la oficina o el fin de semana.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Camisa%20moderna%20a%20rayas" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/juguete18.png" alt="Peluche de Jessie Toy Story" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Peluche de Jessie (Toy Story)</h3>
+                        <p>La valiente vaquera con su coleta y traje de flecos.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20Jessie%20%28Toy%20Story%29" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo8.png" alt="Suculentas y plantas en macetas decorativas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Suculentas y plantas en maceta</h3>
+                        <p>Variedad de plantas en macetas de cerámica o madera decorativas.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Suculentas%20y%20plantas%20en%20maceta" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN JUGUETES -->
+    <section class="seccion-productos" id="juguetes" aria-labelledby="titulo-juguetes">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-juguetes">Juguetes</h2></div>
+            <div class="rejilla-productos">
+        <article class="producto">
+            <img src="Imagenes/juguete17.png" alt="Peluche de Spiderman" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Peluche de Spiderman</h3>
+                <p>¡Ideal para regalar o completar tu colección!</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20Spiderman" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete16.png" alt="Peluche del vaquero Woody" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Peluche del vaquero Woody (Toy Story)</h3>
+                <p>Coleccionable de Toy Story en su versión de peluche.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20del%20vaquero%20Woody%20%28Toy%20Story%29" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete18.png" alt="Peluche de la vaquera Jessie" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Peluche de Jessie (Toy Story)</h3>
+                <p>La valiente vaquera con su coleta y traje de flecos.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20Jessie%20%28Toy%20Story%29" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <span class="etiqueta etiqueta-nuevo">Nuevo</span>
+            <img src="Imagenes/juguete19.png" alt="Peluche de la rana René con overol" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Peluche de la ranita René con overol</h3>
+                <p>Divertida rana verde con look vaquero.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Peluche%20de%20la%20ranita%20Ren%C3%A9%20con%20overol" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete13.png" alt="Caja con 5 figuras de acción de Sonic y sus amigos" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Sonic: pack de 5 figuras de acción</h3>
+                <p>Pack de 5 figuras de acción: Sonic, Shadow, Super Sonic, Tails y Amy, en caja de exhibición.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Sonic%3A%20pack%20de%205%20figuras%20de%20acci%C3%B3n" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete15.png" alt="Caja con las figuras de Buzz Lightyear y Woody" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Toy Story: Buzz Lightyear y Woody</h3>
+                <p>Set de 2 figuras de Buzz Lightyear y Woody, con el sombrero de vaquero incluido.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Toy%20Story%3A%20Buzz%20Lightyear%20y%20Woody" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete12.png" alt="Pistola lanzadora con bolos y bolas amarillas" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Pistola lanzadora con bolos</h3>
+                <p>Set con pistola lanzadora, 3 bolos de colores y bolas amarillas para jugar a derribarlos.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Pistola%20lanzadora%20con%20bolos" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete10.png" alt="Set de bloques de construcción My World" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Bloques My World</h3>
+                <p>Set de bloques de construcción con escenario de aventura, minifiguras y dragones. Para mayores de 8 años.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Bloques%20My%20World" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete3.png" alt="Camión de bomberos rojo con escalera" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Camión de bomberos</h3>
+                <p>Camión de bomberos rojo con escalera gris y luces azules en la cabina.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Cami%C3%B3n%20de%20bomberos" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete4.png" alt="Camión volquete amarillo" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Camión volquete amarillo</h3>
+                <p>Camión volquete amarillo con tolva y detalles en negro y gris.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Cami%C3%B3n%20volquete%20amarillo" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete5.png" alt="Camioneta Off-Road gris y negra con diseño naranja" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Camioneta Off-Road</h3>
+                <p>Camioneta todoterreno gris y negra con diseño naranja, llantas grandes con relieve y defensa delantera.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Camioneta%20Off-Road" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete14.png" alt="Caja de la muñeca sirena Magic World con cueva submarina" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Sirena Magic World</h3>
+                <p>Muñeca sirena de cabello castaño rojizo, con cueva submarina, pulpo y accesorios del mar.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Sirena%20Magic%20World" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete6.png" alt="Caja de la casa de muñecas Sweet Home" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Casa de muñecas Sweet Home</h3>
+                <p>Casa de juguete rosa con balcón, puertas y ventanas. Incluye muebles y accesorios de colores.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Casa%20de%20mu%C3%B1ecas%20Sweet%20Home" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete7.png" alt="Caja del set Fashion Design Studio con muñeca y maniquíes" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Fashion Design Studio</h3>
+                <p>Muñeca rubia con vestido de falda amplia, 2 maniquíes y telas de colores para diseñar ropa.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Fashion%20Design%20Studio" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete8.png" alt="Caja del juego de té de metal con tetera, tazas y platos" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Juego de té Metal Tea Set</h3>
+                <p>Set de té de juguete con tetera, 4 tazas, platos, bandejas y postres de colores.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Juego%20de%20t%C3%A9%20Metal%20Tea%20Set" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete9.png" alt="Maletín de doctor Hello Doctor en turquesa y morado" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Maletín Hello Doctor</h3>
+                <p>Maletín de juguete en turquesa y morado, con asa, que se abre como un pequeño consultorio con accesorios.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Malet%C3%ADn%20Hello%20Doctor" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+        <article class="producto">
+            <img src="Imagenes/juguete11.png" alt="Caja del Mini Pet, perrito de peluche con cochecito rosa" width="600" height="600" loading="lazy">
+            <div class="producto-info">
+                <h3>Mini Pet con cochecito</h3>
+                <p>Perrito de peluche blanco con manchas marrones, con cochecito rosa y accesorios.</p>
+                <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Mini%20Pet%20con%20cochecito" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+            </div>
+        </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN REGALOS -->
+    <section class="seccion-productos" id="regalos" aria-labelledby="titulo-regalos">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-regalos">Regalos</h2></div>
+            <div class="rejilla-productos">
+                <article class="producto">
+                    <img src="Imagenes/regalo7.png" alt="Box de regalo Feliz Día Mamá con globo y peluche" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Box “Feliz Día Mamá”</h3>
+                        <p>Incluye peluche, globo transparente con confeti y tarjeta personalizable.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Box%20%E2%80%9CFeliz%20D%C3%ADa%20Mam%C3%A1%E2%80%9D" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo1.png" alt="Caja de regalo con girasol y peluche de Snoopy" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Caja de regalo con girasol y Snoopy</h3>
+                        <p>Caja decorativa con corazones, un girasol brillante, un peluche de Snoopy y una bebida.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Caja%20de%20regalo%20con%20girasol%20y%20Snoopy" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo7.png" alt="Globos burbuja transparentes de cumpleaños" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Globos burbuja de cumpleaños</h3>
+                        <p>Globos transparentes de gran tamaño con confeti brillante y mensajes alegres.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Globos%20burbuja%20de%20cumplea%C3%B1os" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo8.png" alt="Suculentas y plantas en macetas decorativas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Suculentas y plantas en maceta</h3>
+                        <p>Variedad de plantas en macetas de cerámica o madera decorativas.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Suculentas%20y%20plantas%20en%20maceta" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                <img src="Imagenes/regalo5.png" alt="Ramo de rosas rojas envuelto en papel rosa a cuadros con lazo rosa" width="600" height="600" loading="lazy">
+                <div class="producto-info">
+                    <h3>Ramo de rosas rojas con lazo rosa</h3>
+                    <p>Ramo de rosas rojas envuelto en papel rosa a cuadros, con lazo rosa y adorno de corazón “Feliz Día Mamá”.</p>
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Ramo%20de%20rosas%20rojas%20con%20lazo%20rosa" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo4.png" alt="Box de regalo con osito, rosa roja y mini botella de espumante" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Box osito con rosa y espumante</h3>
+                        <p>Box de regalo con osito de peluche, rosa roja y mini botella de espumante, en caja rosa con forma de corazón.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Box%20osito%20con%20rosa%20y%20espumante" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo6.png" alt="Box de regalo con osito blanco, girasol y flores fucsia" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Box osito con flores y girasol</h3>
+                        <p>Box de regalo con osito blanco de lazo rosa, girasol y flores fucsia, presentado en una caja decorada con corazones.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Box%20osito%20con%20flores%20y%20girasol" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/regalo10.png" alt="Box de regalo con osito rosa, taza “Te Amo Mamá” y tarjeta" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Box osito rosa con taza</h3>
+                        <p>Box de regalo con peluche rosa con corazón, taza “Te Amo Mamá” y tarjeta, en caja de regalo rosa.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Box%20osito%20rosa%20con%20taza" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FESTIVIDADES (NUEVA) -->
+    <section class="seccion-productos" id="festividades" aria-labelledby="titulo-festividades">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-festividades">Festividades (Navidad)</h2></div>
+            <div class="rejilla-productos">
+                <article class="producto">
+                    <img src="Imagenes/art_festivo6.png" alt="Árbol de Navidad verde con luces y esferas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Árbol de Navidad con luces</h3>
+                        <p>Árbol verde con luces cálidas y esferas rojas y doradas, con base dorada.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20%C3%81rbol%20de%20Navidad%20con%20luces" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo3.png" alt="Esferas navideñas de vidrio en verde y dorado" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Esferas navideñas</h3>
+                        <p>Esferas en verde, dorado y vino con acabados de terciopelo y brillo.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Esferas%20navide%C3%B1as" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo2.png" alt="Cadena de luces navideñas con focos de colores" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Luces navideñas multicolor</h3>
+                        <p>Cadena de luces con focos de colores, para decorar el árbol o las ventanas.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Luces%20navide%C3%B1as%20multicolor" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo5.png" alt="Corona navideña de ramas con piñas y lazo" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Corona navideña con piñas</h3>
+                        <p>Corona de ramas con piñas y lazo rojo y dorado para puerta o pared.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Corona%20navide%C3%B1a%20con%20pi%C3%B1as" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo4.jpeg" alt="Cascanueces decorativo con uniforme rojo y verde" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Soldado cascanueces</h3>
+                        <p>Cascanueces decorativo con uniforme rojo y verde, sombrero negro y detalles dorados.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Soldado%20cascanueces" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo7.jpeg" alt="Reno decorativo de felpa" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Reno decorativo</h3>
+                        <p>Reno decorativo con cuerpo de felpa y cornamenta, ideal para la sala o repisa.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Reno%20decorativo" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo8.jpeg" alt="Papá Noel de felpa" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Papá Noel de felpa</h3>
+                        <p>Papá Noel decorativo de felpa con traje tradicional rojo y blanco.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Pap%C3%A1%20Noel%20de%20felpa" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo9.jpeg" alt="Papel de regalo navideño" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Papel de regalo navideño</h3>
+                        <p>Rollos de papel de regalo con diseños festivos en verde, rojo y crema.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Papel%20de%20regalo%20navide%C3%B1o" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/art_festivo10.jpeg" alt="Bolsas de temática navideñas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Bolsas de regalo navideñas</h3>
+                        <p>Bolsas con cordón para regalo con tiernos diseños navideños.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Bolsas%20de%20tela%20navide%C3%B1as" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ROPA -->
+    <section class="seccion-productos" id="ropa" aria-labelledby="titulo-ropa">
+        <div class="contenedor">
+            <div class="titulo-seccion"><h2 id="titulo-ropa">Ropa</h2></div>
+            <div class="rejilla-productos">
+                <article class="producto">
+                    <img src="Imagenes/ropa18.png" alt="Camisa moderna a rayas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Camisa moderna a rayas</h3>
+                        <p>Azul rayado con botones. Estilo clásico para la oficina o el fin de semana.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Camisa%20moderna%20a%20rayas" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa2.png" alt="Jeans corte recto con cinturón" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Jeans corte recto con cinturón</h3>
+                        <p>Denim azul con cintura elástica y bolsillos delanteros. Incluye cinturón.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Jeans%20corte%20recto%20con%20cintur%C3%B3n" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa16.png" alt="Blusa roja de manga larga" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Blusa roja de manga larga</h3>
+                        <p>Blusa elegante de manga larga en color rojo con cuello en V.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Blusa%20roja%20de%20manga%20larga" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa15.png" alt="Blusa de manga corta con volantes" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Blusa de manga corta con volantes</h3>
+                        <p>Top juvenil azul con delicados volantes en los hombros.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Blusa%20de%20manga%20corta%20con%20volantes" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa13.png" alt="Vestido de tirantes con estampado" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Vestido de tirantes con estampado</h3>
+                        <p>Ligero y fresco en tonos verdes y blancos, con corte entallado.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Vestido%20de%20tirantes%20con%20estampado" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa9.png" alt="Blusa negra acanalada" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Blusa negra acanalada</h3>
+                        <p>Blusa de tejido acanalado con cuello en V y botones decorativos.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Blusa%20negra%20acanalada" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa3.png" alt="Jean ancho con pretina elástica" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Jean ancho con pretina elástica</h3>
+                        <p>Jean azul intenso de pierna ancha con pretina cómoda y pinzas delanteras.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Jean%20ancho%20con%20pretina%20el%C3%A1stica" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa10.png" alt="Polo de rayas lilas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo de rayas lilas</h3>
+                        <p>Polo de manga corta en fondo blanco con finas rayas lilas y cuello en V.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20de%20rayas%20lilas" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa11.png" alt="Casaca tejida con capucha" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Casaca tejida con capucha</h3>
+                        <p>Casaca tejida gris con capucha, cierre frontal y bolsillos.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Casaca%20tejida%20con%20capucha" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa12.png" alt="Polo negro de manga larga" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo negro de manga larga</h3>
+                        <p>Polo negro básico esencial de manga larga con cuello en V.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20negro%20de%20manga%20larga" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa6.png" alt="Polo gris de manga larga" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo gris de manga larga</h3>
+                        <p>Polo gris de tejido acanalado, manga larga y cuello en V.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20gris%20de%20manga%20larga" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa1.png" alt="Jean azul rasgado con estampado en la pierna" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Jean rasgado con estampado</h3>
+                        <p>Jean azul con rasgados en las rodillas y estampado en la pierna.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Jean%20rasgado%20con%20estampado" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa4.png" alt="Pantalón de pana marrón con botones al frente" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Pantalón de pana marrón</h3>
+                        <p>Pantalón de pana color chocolate con cierre de botones al frente y bolsillos.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Pantal%C3%B3n%20de%20pana%20marr%C3%B3n" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa5.png" alt="Polo de manga larga con estampado de leopardo" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo animal print</h3>
+                        <p>Polo de manga larga y cuello redondo con estampado de leopardo.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20animal%20print" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa6.png" alt="Polo gris de manga larga con cuello redondo" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo gris de cuello redondo</h3>
+                        <p>Polo básico gris de manga larga y cuello redondo.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20gris%20de%20cuello%20redondo" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa7.png" alt="Polo rosa de manga larga con la frase Vista Fashion" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Polo rosa “Vista Fashion”</h3>
+                        <p>Polo rosa de manga larga y cuello redondo, con la frase “Vista Fashion” en el frente.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Polo%20rosa%20%E2%80%9CVista%20Fashion%E2%80%9D" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+                <article class="producto">
+                    <img src="Imagenes/ropa17.png" alt="Blusa negra con estampado de siluetas blancas" width="600" height="600" loading="lazy">
+                    <div class="producto-info">
+                        <h3>Blusa negra con siluetas</h3>
+                        <p>Blusa negra de cuello camisero y manga tres cuartos, con estampado de siluetas blancas.</p>
+                        <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20consultar%20m%C3%A1s%20detalles%20sobre%3A%20Blusa%20negra%20con%20siluetas" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Consultar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="seccion-productos" id="catalogos" aria-labelledby="titulo-catalogos">
+        <div class="contenedor">
+            <div class="titulo-seccion">
+                <h2 id="titulo-catalogos">Catálogos disponibles</h2>
+                <p>Pídenos el catálogo de tu marca favorita por WhatsApp.</p>
+            </div>
+            <div class="rejilla-catalogos">
+                <article class="catalogo">
+                    <h3>Natura</h3>
+                    <img src="Imagenes/natura-1.png" alt="Logo de Natura" loading="lazy">
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20el%20cat%C3%A1logo%20de%20Natura" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Pedir catálogo</a>
+                </article>
+                <article class="catalogo">
+                    <h3>Avon</h3>
+                    <img src="Imagenes/avon.png" alt="Logo de Avon" loading="lazy">
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20el%20cat%C3%A1logo%20de%20Avon" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Pedir catálogo</a>
+                </article>
+                <article class="catalogo">
+                    <h3>Esika</h3>
+                    <img src="Imagenes/Esika_logo_PNG1.png" alt="Logo de Esika" loading="lazy">
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20el%20cat%C3%A1logo%20de%20Esika" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Pedir catálogo</a>
+                </article>
+                <article class="catalogo">
+                    <h3>Seytu</h3>
+                    <img src="Imagenes/seytu-seeklogo.png" alt="Logo de Seytu" loading="lazy">
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20el%20cat%C3%A1logo%20de%20Seytu" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Pedir catálogo</a>
+                </article>
+                <article class="catalogo">
+                    <h3>Yanbal</h3>
+                    <img src="Imagenes/yanbal-seeklogo.png" alt="Logo de Yanbal" loading="lazy">
+                    <a class="btn btn-wa" href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20el%20cat%C3%A1logo%20de%20Yanbal" target="_blank" rel="noopener"><img src="Imagenes/icons8-whatsapp-48.png" alt="" width="22" height="22"> Pedir catálogo</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- WhatsApp flotante (visible en las 5 páginas) -->
+<a href="https://wa.me/51930438700?text=Hola%2C%20quisiera%20informaci%C3%B3n" class="whatsapp-flotante" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <img src="Imagenes/icons8-whatsapp-48.png" alt="" width="30" height="30">
+</a>
+
+<!-- PIE DE PÁGINA -->
+<footer class="pie">
+    <div class="pie-superior">
+        <div class="pie-marca">
+            <img src="Imagenes/logo_cr_vanidades.png" alt="Logo Vanidades Store" width="96" height="96" loading="lazy">
+            <div>
+                <h4>Vanidades Store</h4>
+                <p>Tu bazar de confianza en el mercado, hace más de 10 años.</p>
+            </div>
+        </div>
+
+        <nav aria-label="Enlaces del pie de página">
+            <h4>Enlaces</h4>
+            <div class="pie-enlaces">
+                <a href="productos.html">Productos</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="resenas.html">Reseñas</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+        </nav>
+
+        <div>
+            <h4>Síguenos</h4> 
+            <div class="redes">
+                <!-- Reemplazar "#" por el link real de cada red social -->
+                <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><img src="Imagenes/icons8-instagram-48.png" alt="" width="24" height="24"></a>
+                <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><img src="Imagenes/facebook.png" alt="" width="24" height="24"></a>
+            </div>
+         <a class="libro-reclamaciones" href="reclamaciones.html"><span aria-hidden="true">📖</span> Libro de Reclamaciones</a>
+        </div>
+    </div>
+
+<div class="pie-inferior">
+    <p>© 2026 Vanidades Store · Horario: Lun-Sáb 12:00 - 6:00 pm</p>
+    <a href="#top">Volver arriba ↑</a>
+</div>
+</footer>
+
+<script src="Scripts/config.js" defer></script>
+<script src="Scripts/franja.js" defer></script>
+<script src="Scripts/lista.js" defer></script>
+
+</body>
+</html>

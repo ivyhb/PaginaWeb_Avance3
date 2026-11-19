@@ -1,0 +1,27 @@
+/* contacto.css — SOLO lo propio de contacto.html */
+
+.contacto-grid { display: grid; gap: 1.5rem; align-items: start; }
+
+/* El formulario y sus campos están en Estilos/formularios.css */
+
+/* ---------- DATOS DE ATENCIÓN (aside) ---------- */
+.datos { display: grid; gap: 1rem; }
+.dato {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+.dato h3 { margin-bottom: 0.35rem; }
+.dato p { color: var(--texto-suave); }
+.dato .btn { margin-top: 0.9rem; }
+address { font-style: normal; }
+
+/* ---------- MAPA ---------- */
+.mapa { border-radius: var(--radio); overflow: hidden; border: 1px solid var(--borde); }
+.mapa iframe { display: block; width: 100%; height: 280px; border: 0; }
+
+@media (min-width: 900px) {
+  .contacto-grid { grid-template-columns: 1.2fr 1fr; gap: 2rem; }
+  .mapa iframe { height: 380px; }
+}

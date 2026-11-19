@@ -1,0 +1,40 @@
+/* nosotros.css — SOLO lo propio de nosotros.html */
+
+.banner-pagina.con-foto {
+  background-image:
+    linear-gradient(rgba(28, 13, 21, 0.6), rgba(28, 13, 21, 0.6)),
+    url("../Imagenes/localNuevo.jpg");
+  background-position: center 60%;
+}
+
+/* ---------- TARJETAS DE HISTORIA ---------- */
+.historia { display: grid; gap: 1rem; }
+.historia article {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-left: 5px solid var(--rosa);
+  border-radius: 0 var(--radio) var(--radio) 0;
+  padding: 1.25rem 1.25rem 1.4rem;
+}
+.historia h3 { margin-bottom: 0.4rem; }
+.historia p { color: var(--texto-suave); }
+.historia .destacado { font-family: var(--fuente-titulos); font-size: 1.6rem; color: var(--rosa-oscuro); line-height: 1; margin-bottom: 0.4rem; }
+
+/* ---------- QUIÉN TE ATIENDE ---------- */
+.atencion { display: grid; gap: 1.5rem; align-items: center; }
+.atencion img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radio); }
+.atencion p { color: var(--texto-suave); margin-top: 0.75rem; max-width: 55ch; }
+
+/* ---------- GALERÍA ---------- */
+.galeria { display: grid; gap: 1rem; }
+.galeria figure { background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.galeria img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.galeria figcaption { padding: 0.75rem 1rem; font-size: 0.95rem; color: var(--texto-suave); }
+
+@media (min-width: 700px) {
+  .historia { grid-template-columns: repeat(3, 1fr); }
+  .galeria { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
+  .atencion { grid-template-columns: 1fr 1fr; gap: 3rem; }
+}

@@ -1,0 +1,88 @@
+/* reclamaciones.css — SOLO lo propio de reclamaciones.html (Libro de Reclamaciones) */
+
+.reclamo-grid { display: grid; gap: 1.5rem; align-items: start; }
+
+/* Datos del proveedor y avisos */
+.proveedor,
+.aviso-legal {
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  padding: 1.25rem;
+}
+.proveedor h2 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+.proveedor dl { display: grid; gap: 0.5rem; }
+.proveedor dt { font-weight: 800; font-size: 0.85rem; color: var(--texto-suave); }
+.proveedor dd { margin: 0; }
+.aviso-legal { background: var(--rosa-claro); border-color: transparent; font-size: 0.92rem; color: var(--texto); }
+.aviso-legal p + p { margin-top: 0.6rem; }
+
+/* Secciones numeradas del formulario */
+fieldset.bloque-form { border: 0; padding: 0; margin: 0 0 1.75rem; min-width: 0; }
+#pedido { min-height: 90px; }
+.bloque-form > h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+.bloque-form > h2 .num {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--rosa);
+  color: #fff;
+  font-size: 1rem;
+}
+.hoja-datos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--fondo);
+  border: 1px dashed var(--borde);
+  border-radius: 12px;
+  font-size: 0.92rem;
+}
+.opcion small { display: block; color: var(--texto-suave); font-size: 0.85rem; }
+.fila-doble { display: grid; gap: 0 1rem; }
+
+/* ---------- CONSTANCIA (resultado) ---------- */
+.constancia h2 { margin-bottom: 0.25rem; }
+.constancia .numero-hoja {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.8rem;
+  background: var(--ciruela);
+  color: #fff;
+  border-radius: 999px;
+  font-family: var(--fuente-titulos);
+  letter-spacing: 0.03em;
+}
+.constancia dl { display: grid; gap: 0.6rem; margin-bottom: 1.25rem; }
+.constancia dl div { padding-bottom: 0.6rem; border-bottom: 1px solid var(--borde); }
+.constancia dt { font-weight: 800; font-size: 0.82rem; color: var(--texto-suave); }
+.constancia dd { margin: 0; overflow-wrap: anywhere; white-space: pre-line; }
+.constancia .nota { font-size: 0.88rem; color: var(--texto-suave); margin-bottom: 1rem; }
+
+@media (min-width: 640px) {
+  .fila-doble { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .reclamo-grid { grid-template-columns: 1fr 2.2fr; gap: 2rem; }
+  .proveedor-col { position: sticky; top: calc(var(--alto-cabecera) + 16px); display: grid; gap: 1rem; }
+}
+
+/* ---------- IMPRESIÓN / GUARDAR COMO PDF ---------- */
+@media print {
+  .cabecera, .pie, .whatsapp-flotante, .banner-pagina, .franja-promo,
+  .proveedor-col, .acciones-constancia, #form-reclamo { display: none !important; }
+  body { background: #fff; }
+  .banda { padding: 0; }
+  .formulario.constancia { border: 0; padding: 0; }
+}

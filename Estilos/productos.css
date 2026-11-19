@@ -1,0 +1,91 @@
+/* productos.css — SOLO lo propio de productos.html */
+
+.banner-pagina.con-foto {
+  background-image:
+    linear-gradient(rgba(28, 13, 21, 0.55), rgba(28, 13, 21, 0.55)),
+    url("../Imagenes/bannerProd.jpg");
+  background-position: center 30%;
+}
+
+/* ---------- SUBMENÚ DE CATEGORÍAS ---------- */
+.submenu {
+  position: sticky;
+  top: var(--alto-cabecera);
+  z-index: 40;
+  background: #fff;
+  border-bottom: 1px solid var(--borde);
+}
+.submenu-lista {
+  display: flex;
+  gap: 0.5rem;
+  max-width: var(--ancho-max);
+  margin: 0 auto;
+  padding: 0.7rem 1rem;
+  overflow-x: auto;                 /* en celular se desliza de lado */
+  scrollbar-width: none;
+}
+.submenu-lista::-webkit-scrollbar { display: none; }
+.submenu a {
+  flex: 0 0 auto;
+  padding: 0.45rem 1.1rem;
+  border: 2px solid var(--rosa);
+  border-radius: 999px;
+  color: var(--rosa-oscuro);
+  font-weight: 800;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+}
+.submenu a:hover { background: var(--rosa); color: #fff; }
+
+/* ---------- SECCIONES DE PRODUCTOS ---------- */
+.seccion-productos { padding: 2.5rem 0; }
+.seccion-productos:nth-of-type(even) { background: var(--blanco); }
+
+/* ---------- CATÁLOGOS (marcas) ---------- */
+.rejilla-catalogos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.catalogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  text-align: center;
+}
+.catalogo > img {
+  width: 100%;
+  height: 90px;
+  object-fit: contain;
+}
+.catalogo .btn { width: 100%; padding: 0.5rem 0.75rem; font-size: 0.9rem; }
+
+/* Si queda un catálogo solo en la última fila (celular), se centra */
+.catalogo:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 0.5rem); }
+
+@media (min-width: 600px) {
+  .rejilla-catalogos { grid-template-columns: repeat(3, 1fr); }
+  .catalogo:last-child:nth-child(odd) { grid-column: auto; justify-self: stretch; width: auto; }
+}
+@media (min-width: 700px) {
+  .banner-pagina.con-foto {
+    background-image:
+      linear-gradient(rgba(28, 13, 21, 0.55), rgba(28, 13, 21, 0.55)),
+      url("../Imagenes/bannerProdPanoramico.jpeg");
+    min-height: clamp(260px, 25vw, 480px);   /* ~4:1: la imagen se ve casi completa */
+  }
+}
+@media (min-width: 900px) {
+  html { scroll-padding-top: 140px; }
+  .rejilla-catalogos { grid-template-columns: repeat(5, 1fr); }
+  .seccion-productos { padding: 3.5rem 0; }
+}
+@media (max-width: 899px) {
+  html { scroll-padding-top: 130px; }
+}
